@@ -1,0 +1,18 @@
+.header {
+    display: flex;
+    top: 0;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 8vh;
+    background: #0097A7;
+    color: #FFFFFF;
+    margin: 0;
+  }
+.container-title{
+    display: flex;
+    margin: 0 1rem;
+}
+.logo{
+    margin: 0.5rem;
+}

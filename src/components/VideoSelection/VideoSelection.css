@@ -1,0 +1,6 @@
+.container-video-selection{
+    width: 30%;
+    left: 0;
+    height: inherit;
+    overflow-y: scroll;
+}
