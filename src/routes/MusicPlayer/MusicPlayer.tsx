@@ -3,7 +3,7 @@ import './MusicPlayer.css'
 
 const MusicPlayer: React.FC = () => {
   return (
-    <div>; React.FC</div>
+    <div>Music Player</div>
   )
 }
 
