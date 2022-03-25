@@ -1,7 +1,7 @@
 import React from 'react'
+import './VideoSelection.css'
 import { useSelector, RootStateOrAny} from 'react-redux'
 import VideoDetails from '../VideoDetails/VideoDetails'
-import video from '../../features/slices/video'
 
 const VideoSelection: React.FC = () => {
   const videoInfo = useSelector((state: RootStateOrAny) => state.video.data)

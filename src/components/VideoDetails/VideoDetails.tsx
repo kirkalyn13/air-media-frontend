@@ -7,15 +7,16 @@ import PlayCircleOutlineIcon from '@mui/icons-material/PlayCircleOutline'
 import { useDispatch } from 'react-redux'
 import { play } from '../../features/slices/watch'
 
-
 const cardStyle = {
     display: "flex",
     backgroundColor: '#0097A7', 
     color: '#FFF', 
     fontWeight:"300", 
     justifyContent:"space-between",
-    margin: "10px",
-    height: "100px"
+    margin: "10px 0",
+    height: "75px",
+    width: "inherit",
+    left: "0"
 }
 
 const typoStyles = {
@@ -42,28 +43,30 @@ const VideoDetails: React.FC<Props> = ({videoID, title, genre}) => {
     const dispatch = useDispatch()
 
     return (
-    <Card 
-    sx={{ minWidth: 275 }}
-    style={cardStyle}>
-        <CardContent>
-            <Typography style={typoStyles} variant="h6" align="left" component="div">
-            {title}
-            </Typography>
-            <Typography style={typoStyles} variant="caption" align="left" component="div">
-            {genre}
-            </Typography>
-        </CardContent>
-        <IconButton style={buttonStyles} 
-            onClick={()=>{
-                dispatch(play({
-                    videoID,
-                    title,
-                    genre,
-                }))
-            }}>
-            <PlayCircleOutlineIcon />
-        </IconButton>
-    </Card>
+        <div className="card">
+            <Card 
+            sx={{ minWidth: 275 }}
+            style={cardStyle}>
+                <CardContent>
+                    <Typography style={typoStyles} variant="inherit" align="left" component="div">
+                    {title}
+                    </Typography>
+                    <Typography style={typoStyles} variant="caption" align="left" component="div">
+                    {genre}
+                    </Typography>
+                </CardContent>
+                <IconButton style={buttonStyles} 
+                    onClick={()=>{
+                        dispatch(play({
+                            videoID,
+                            title,
+                            genre,
+                        }))
+                    }}>
+                    <PlayCircleOutlineIcon />
+                </IconButton>
+            </Card>
+        </div>
   )
 }
 

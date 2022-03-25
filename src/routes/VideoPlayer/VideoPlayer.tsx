@@ -14,8 +14,8 @@ const VideoPlayer: React.FC = () => {
 
   return (
     <div className="container-video-player">
-        <VideoSelection />
         <Video/>
+        <VideoSelection />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import Header from './components/Header/Header'
 import VideoPlayer from './routes/VideoPlayer/VideoPlayer';
 import Sidebar from './components/Sidebar/Sidebar';
 
-export const SERVER = "http://localhost:3010"
+export const SERVER = "http://192.168.100.62:3010"
 
 const App: React.FC = () => {
   return (

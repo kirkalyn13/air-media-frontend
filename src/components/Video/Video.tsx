@@ -9,11 +9,16 @@ const Video: React.FC= () => {
     
   return (
     <div className="container-video">
-      <h1>{watchInfo.title}</h1>
-      <h4>{watchInfo.genre}</h4>
-      <ReactPlayer light controls 
-      width="854px" height="480px"
-      url={`${SERVER}/videos/watch/${watchInfo.videoID}`} />
+      <div className="video-wrapper">
+        <ReactPlayer 
+        light controls 
+        className='react-player'
+        width="inherit"
+        height="inherit"
+        url={`${SERVER}/videos/watch/${watchInfo.videoID}`} />
+      </div>
+      <h2>{watchInfo.title}</h2>
+      <p>{watchInfo.genre}</p>
     </div>
   )
 }
