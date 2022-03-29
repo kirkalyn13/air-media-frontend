@@ -1,6 +1,4 @@
 import {createSlice} from '@reduxjs/toolkit'
-import { SERVER } from '../../App'
-import axios from 'axios'
 
 interface Video {
   videoID: number | null,

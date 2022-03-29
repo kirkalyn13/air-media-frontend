@@ -10,6 +10,7 @@ const MusicPlayer: React.FC = () => {
   useEffect(()=>{
     dispatch(fetchMusic())
   },[])
+  
   return (
     <div className="container-music-player">
       <MusicSelection />
