@@ -8,12 +8,14 @@ import {Provider} from 'react-redux'
 import videoReducer from './features/slices/video'
 import watchReducer from './features/slices/watch'
 import musicReducer from './features/slices/music'
+import listenReducer from './features/slices/listen'
 
 const store = configureStore({
   reducer: {
     video: videoReducer,
     watch: watchReducer,
     music: musicReducer,
+    listen: listenReducer
   }
 })
 

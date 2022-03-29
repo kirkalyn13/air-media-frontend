@@ -9,7 +9,7 @@ interface Song {
 
 const initialFieldValues: Song[] = [
   {
-  musicID: null,
+  musicID: 0,
   title: "",
   artist: "",
   genre: "",

@@ -17,8 +17,10 @@ const Video: React.FC= () => {
         height="inherit"
         url={`${SERVER}/videos/watch/${watchInfo.videoID}`} />
       </div>
-      <h2>{watchInfo.title}</h2>
-      <p>{watchInfo.genre}</p>
+      <div className="movie-details">
+        <h2>{watchInfo.title}</h2>
+        <p>{watchInfo.genre}</p>
+      </div>
     </div>
   )
 }

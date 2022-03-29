@@ -1,0 +1,32 @@
+.container-song-player{
+    width:  100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-icons{
+    display: flex;
+    align-items: center;
+}
+.music-image{
+    margin: 3rem 1rem;
+    width: 450px;
+    height: 450px;
+}
+@media(max-width: 800px){
+    .music-image{
+        margin:  1rem 0.5rem;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 300px){
+    .music-image{
+        margin:  1rem 0.5rem;
+        width: 150px;
+        height: 150px;
+    }
+}
