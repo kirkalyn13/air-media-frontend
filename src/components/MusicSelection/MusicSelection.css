@@ -1,0 +1,33 @@
+.container-music-selection{
+    width: 30%;
+    height: 90vh;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: center;
+}
+
+@media(max-width: 800px){
+    .container-music-selection{
+        width: 100%;
+        height: 40%;
+    }
+}
+
+/*SCROLL BAR*/
+/* width */
+::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #607D8B;
+    border-radius: 8px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #0097A7;
+    border-radius: 8px;
+    }

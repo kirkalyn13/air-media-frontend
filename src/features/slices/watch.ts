@@ -1,4 +1,4 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
+import {createSlice} from '@reduxjs/toolkit'
 import { SERVER } from '../../App'
 import axios from 'axios'
 
@@ -17,7 +17,7 @@ const initialFieldValues: Video[] = [
 ]
 
 export const watchSlice = createSlice({
-    name: "video",
+    name: "watch",
     initialState: {
         data: initialFieldValues,
     },

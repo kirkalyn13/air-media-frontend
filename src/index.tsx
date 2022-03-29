@@ -7,11 +7,13 @@ import {configureStore} from '@reduxjs/toolkit'
 import {Provider} from 'react-redux'
 import videoReducer from './features/slices/video'
 import watchReducer from './features/slices/watch'
+import musicReducer from './features/slices/music'
 
 const store = configureStore({
   reducer: {
     video: videoReducer,
-    watch: watchReducer
+    watch: watchReducer,
+    music: musicReducer,
   }
 })
 

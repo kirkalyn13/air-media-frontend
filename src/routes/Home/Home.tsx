@@ -1,5 +1,5 @@
 import React from 'react'
-import Welcome from '../../../components/Welcome/Welcome'
+import Welcome from '../../components/Welcome/Welcome'
 
 const watchHeadline = "Watch your Favorite Movie."
 const watchContent = "Revisit your favorite stories while you travel."
