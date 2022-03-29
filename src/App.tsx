@@ -12,8 +12,8 @@ export const SERVER = "http://192.168.100.62:3010"
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Header />
       <Router>
+      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/video" element={<VideoPlayer />} />

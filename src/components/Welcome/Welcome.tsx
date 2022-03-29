@@ -20,7 +20,7 @@ const Welcome: React.FC<Props> = ({headline, content, link, linkTo, photo}) => {
             <p>{content}</p>
             <Link to={link}>
             {linkTo}
-        </Link>
+            </Link>
         </div>
     </div>
   )
