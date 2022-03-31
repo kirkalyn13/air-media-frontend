@@ -10,7 +10,7 @@ const VideoSelection: React.FC = () => {
   return (
     <div className="container-video-selection">
         <Searchbar searchTitle='Video' load="video"/>
-        <ul>
+        <ul className='video-list'>
             {videoInfo.map((vid: any) => <VideoDetails key={vid.videoID} videoID={vid.videoID} title={vid.title} genre={vid.genre}/>)}
         </ul>
     </div>

@@ -13,7 +13,7 @@ const cardStyle = {
     color: '#FFF', 
     fontWeight:"300", 
     justifyContent:"space-between",
-    margin: "10px 0",
+    margin: "0.5rem 0.5rem 0 0",
     height: "80px",
     width: "inherit",
     left: "0"

@@ -10,7 +10,7 @@ const MusicSelection: React.FC = () => {
   return (
     <div className="container-music-selection">
       <Searchbar searchTitle='Song' load="song"/>
-        <ul>
+        <ul className='song-list'>
             {musicInfo.map((song: any) => <MusicDetails key={song.musicID} musicID={song.musicID} artist={song.artist} title={song.title} genre={song.genre}/>)}
         </ul>
     </div>

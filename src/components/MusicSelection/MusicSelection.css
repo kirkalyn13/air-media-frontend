@@ -1,15 +1,18 @@
 .container-music-selection{
     width: 30%;
-    height: 90vh;
-    overflow-y: scroll;
+    height: auto;
     align-items: center;
     justify-content: center;
 }
-
+.song-list{
+    overflow-y: scroll;
+}
 @media(max-width: 800px){
     .container-music-selection{
         width: 100%;
-        height: 40%;
+    }
+    .song-list{
+        height: 50vh;
     }
 }
 
