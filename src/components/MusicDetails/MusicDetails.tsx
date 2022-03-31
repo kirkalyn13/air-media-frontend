@@ -8,8 +8,8 @@ import { useDispatch } from 'react-redux'
 import { play } from '../../features/slices/listen'
 
 const cardStyle = {
-    display: "flex",
-    backgroundColor: '#0097A7', 
+    display: "flex", 
+    backgroundImage: "linear-gradient(#0097A7, #1976D2)",
     color: '#FFF', 
     fontWeight:"300", 
     justifyContent:"space-between",

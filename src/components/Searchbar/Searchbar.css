@@ -1,0 +1,14 @@
+.search-form{
+    width: inherit;
+    height: 50px;
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem 0;
+    background-image: linear-gradient(#0097A7, #1976D2);
+    border-radius: 5px;;
+}
+.input-search{
+    width: 60%;
+}

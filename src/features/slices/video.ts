@@ -29,7 +29,11 @@ export const videoSlice = createSlice({
     initialState: {
         data: initialFieldValues,
     },
-    reducers:{},
+    reducers:{
+      filterVideos: (state, action) => {
+        state.data = state.data.filter((entry:any) => entry.title.toLowerCase().includes(action.payload.search.toLowerCase()))     
+    },
+    },
     extraReducers: (builder) => {
         builder.addCase(fetchVideo.pending, (state) => {
           state.data = initialFieldValues
@@ -40,4 +44,5 @@ export const videoSlice = createSlice({
       }
 })
 
+export const {filterVideos} = videoSlice.actions
 export default videoSlice.reducer

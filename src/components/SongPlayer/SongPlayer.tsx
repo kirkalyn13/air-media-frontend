@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import './SongPlayer.css'
 import ReactAudioPlayer from 'react-audio-player'
 import SkipNextIcon from '@mui/icons-material/SkipNext'
@@ -7,6 +7,7 @@ import { IconButton } from '@mui/material'
 import { useSelector, RootStateOrAny } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { play } from '../../features/slices/listen'
+import { fetchMusic } from '../../features/slices/music'
 import { SERVER } from '../../App'
 
 const MUSIC_LOGO = "./assets/music_logo.png"
@@ -33,7 +34,6 @@ const SongPlayer: React.FC = () => {
     const nextSong = ():void => {
         if(listenID < musicInfo.length - 1){
             const nextID: number = listenID + 1
-            setListenID(nextID)
             dispatch(play({
                 musicID: musicInfo[nextID].musicID,
                 artist: musicInfo[nextID].artist,
@@ -46,7 +46,6 @@ const SongPlayer: React.FC = () => {
     const previousSong = ():void => {
         if(listenID >= 1){
             const prevID: number = listenID - 1
-            setListenID(prevID) 
             dispatch(play({
                 musicID: musicInfo[prevID].musicID,
                 artist: musicInfo[prevID].artist,
@@ -55,6 +54,11 @@ const SongPlayer: React.FC = () => {
             }))
         }
     }
+
+    useEffect(()=>{
+        setListenID(listenInfo.musicID - 1) 
+    },[listenInfo.musicID])
+
 
   return (
     <div className="container-song-player">
@@ -79,6 +83,7 @@ const SongPlayer: React.FC = () => {
         autoPlay
         controls
         style={playerStyles}
+        onPlay={() => dispatch(fetchMusic())}
         />
     </div>
   )

@@ -31,7 +31,11 @@ export const musicSlice = createSlice({
     initialState: {
         data: initialFieldValues,
     },
-    reducers:{},
+    reducers:{
+      filterMusic: (state, action) => {
+        state.data = state.data.filter((entry:any) => entry.title.toLowerCase().includes(action.payload.search.toLowerCase()))     
+    },
+    },
     extraReducers: (builder) => {
         builder.addCase(fetchMusic.pending, (state) => {
           state.data = initialFieldValues
@@ -42,4 +46,5 @@ export const musicSlice = createSlice({
       }
 })
 
+export const {filterMusic} = musicSlice.actions
 export default musicSlice.reducer

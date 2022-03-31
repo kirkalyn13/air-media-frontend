@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     min-height: 8vh;
-    background: #0097A7;
+    background-image: linear-gradient(#0097A7, #1976D2);
     color: #FFFFFF;
     margin: 0;
 }

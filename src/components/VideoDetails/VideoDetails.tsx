@@ -9,7 +9,7 @@ import { play } from '../../features/slices/watch'
 
 const cardStyle = {
     display: "flex",
-    backgroundColor: '#0097A7', 
+    backgroundImage: "linear-gradient(#0097A7, #1976D2)", 
     color: '#FFF', 
     fontWeight:"300", 
     justifyContent:"space-between",
