@@ -31,32 +31,28 @@ const SongPlayer: React.FC = () => {
     const [listenID, setListenID] = useState(0)
 
     const nextSong = ():void => {
-        if(listenID <= musicInfo.length - 1){
-            setListenID(listenID + 1)
-            setTimeout(()=>{
-                dispatch(play({
-                    musicID: musicInfo[listenID].musicID,
-                    artist: musicInfo[listenID].artist,
-                    title: musicInfo[listenID].title,
-                    genre: musicInfo[listenID].genre,
-                }))
-            },200)
+        if(listenID < musicInfo.length - 1){
+            const nextID: number = listenID + 1
+            setListenID(nextID)
+            dispatch(play({
+                musicID: musicInfo[nextID].musicID,
+                artist: musicInfo[nextID].artist,
+                title: musicInfo[nextID].title,
+                genre: musicInfo[nextID].genre,
+            }))
         }
     }
 
     const previousSong = ():void => {
-        if(listenID >= 0){
-            setListenID(listenID - 1) 
-            console.log("back", listenID)
-            setTimeout(()=>{
-                dispatch(play({
-                    musicID: musicInfo[listenID].musicID,
-                    artist: musicInfo[listenID].artist,
-                    title: musicInfo[listenID].title,
-                    genre: musicInfo[listenID].genre,
-                }))
-            },200)
-            console.log("change song")
+        if(listenID >= 1){
+            const prevID: number = listenID - 1
+            setListenID(prevID) 
+            dispatch(play({
+                musicID: musicInfo[prevID].musicID,
+                artist: musicInfo[prevID].artist,
+                title: musicInfo[prevID].title,
+                genre: musicInfo[prevID].genre,
+            }))
         }
     }
 
